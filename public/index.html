@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <style>
+    button#link {
+        background:none!important;
+        border:none; 
+        padding:0!important;
+        font: inherit;
+        border-bottom:1px solid #444; 
+        cursor: pointer;
+    }
+    #error-message{
+      margin-top:30px;
+    }
+  </style>
+</head>
+<body class="jumbotron">
+  <div class="container">
+    <div class="jumbotron">
+        <h1 class="text-center">URL Shortener</h1>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="input-group input-group-lg">
+              <input id="url-field" name="url-field" type="text" class="form-control" placeholder="Paste a link here...">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">SHORTEN</button>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-12 jumbotron">
+              <code id="link">
+                { 
+                  <br>
+                    <code>&nbsp;&nbsp;&nbsp;original_url:</code><code id="long_url"></code>
+                  <br>
+                    <code>&nbsp;&nbsp;&nbsp;short_url:&nbsp;&nbsp;</code>
+                    <span id="short_url"></span>
+                  <br>
+              &nbsp;}
+              </code>
+            <div class="alert" id="error-message"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="fetch.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
